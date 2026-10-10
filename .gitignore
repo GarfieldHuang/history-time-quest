@@ -1,0 +1,11 @@
+# 影片專案的大型／二進位產物（不進版控）
+video/assets/
+video/tts_lite/
+video/renders/
+video/snapshots/
+video/node_modules/
+video/audio.log
+video/.hyperframes/frame-packets/
+# 講義截圖：有著作權，只留在本機
+video/public/maps/
+.playwright-mcp/

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>時空闖關：商周到隋唐</title>
+  <meta name="description" content="國中歷史（三）第 1～2 章段考複習遊戲：時空闖關、時間軸排序、連連看、模擬考。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏳</text></svg>" />
+</head>
+<body>
+  <header class="topbar">
+    <button class="logo" data-go="home" aria-label="回首頁">⏳ 時空闖關</button>
+    <div class="stats">
+      <span class="pill" title="星星">⭐ <b id="starCount">0</b></span>
+      <span class="pill" title="徽章">🏅 <b id="badgeCount">0</b></span>
+      <button class="pill icon" id="soundBtn" aria-label="切換音效">🔊</button>
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <template id="tpl-home">
+    <section class="screen home">
+      <div class="hero card tilt">
+        <span class="label">國中歷史（三）・第一次段考・第三篇 1～2 章</span>
+        <h1>時空闖關<br /><span class="hl">商周 → 隋唐</span></h1>
+        <p>你被丟回三千年前！答對題目才能穿越到下一個朝代，一路闖回現代。</p>
+      </div>
+      <div class="modes">
+        <button class="mode card yellow" data-go="map"><span class="em">🗺️</span><b>時空闖關</b><small>7 關朝代冒險・每關 5 題</small></button>
+        <button class="mode card green" data-go="timeline"><span class="em">📅</span><b>時間軸排序</b><small>把事件排回正確順序</small></button>
+        <button class="mode card pink" data-go="match"><span class="em">🔗</span><b>連連看</b><small>人物 ↔ 事蹟配對</small></button>
+        <button class="mode card blue" data-go="exam"><span class="em">📝</span><b>段考模擬</b><small>25 題・滿分 100</small></button>
+        <button class="mode card cream" data-go="review"><span class="em">📕</span><b>錯題本</b><small id="wrongCount">0 題待複習</small></button>
+        <button class="mode card white" data-go="badges"><span class="em">🏅</span><b>徽章牆</b><small>收集全部徽章</small></button>
+      </div>
+      <p class="foot">題目改寫自講義練習題・答對會有解析・進度存在這台裝置</p>
+    </section>
+  </template>
+
+  <script src="questions.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
